@@ -11,7 +11,7 @@ function CardTable() {
     const response = await axios.get(
       "https://deckofcardsapi.com/api/deck/new/draw/"
     );
-    setCards(cards => [...cards, { ...response.data,  }]);
+    setCards(cards => [...cards, { ...response.data, }]);
   };
   return (
     <div className="PlayingCardList">
