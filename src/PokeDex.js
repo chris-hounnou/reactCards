@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import uuid from "uuid";
 import axios from "axios";
 import PokemonSelect from "./PokemonSelect";
 import PokemonCard from "./PokemonCard";
@@ -14,7 +13,7 @@ function PokeDex() {
     const response = await axios.get(
       `https://pokeapi.co/api/v2/pokemon/${name}/`
     );
-    setPokemon(pokemon => [...pokemon, { ...response.data, id: uuid() }]);
+    setPokemon(pokemon => [...pokemon, { ...response.data, }]);
   };
   return (
     <div className="PokeDex">

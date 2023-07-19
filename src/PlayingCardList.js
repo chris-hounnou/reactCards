@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import uuid from "uuid";
 import axios from "axios";
 import PlayingCard from "./PlayingCard";
 import "./PlayingCardList.css";
@@ -12,7 +11,7 @@ function CardTable() {
     const response = await axios.get(
       "https://deckofcardsapi.com/api/deck/new/draw/"
     );
-    setCards(cards => [...cards, { ...response.data, id: uuid() }]);
+    setCards(cards => [...cards, { ...response.data,  }]);
   };
   return (
     <div className="PlayingCardList">
